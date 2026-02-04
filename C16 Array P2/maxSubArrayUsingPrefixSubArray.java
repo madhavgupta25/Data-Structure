@@ -1,7 +1,7 @@
+// This is using prefix sum algorithm algorithm which is simple method 
+// Its time complexity is O(n2) because of 2 nested loop are used in it and they all are going to n and n*n=n2
+import java.util.Scanner;
 class maxSubArrayUsingPrefixSubArray {
-//     static void maxSubArray(int maxSubArray()) {
-        
-//     }
     static void maxSubArraySum(int abc[]) {
         int prefixArraySum[] = new int[abc.length];
         int start = 0 , end = 0, sum = 0, maxSum=Integer.MIN_VALUE;
@@ -25,7 +25,15 @@ class maxSubArrayUsingPrefixSubArray {
     }
 
     public static void main(String args[]) {
-        int abc[]={1,-2,6,-1,3};
+        // int abc[]={1,-2,6,-1,3};
+        System.out.print("Enter the size of array : ");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.print("Enter the element of an array : ");
+        int abc[] = new int[n];
+        for (int i = 0; i<n; i++){
+            abc[i] = sc.nextInt();
+        }
         maxSubArraySum(abc);
     }
 }

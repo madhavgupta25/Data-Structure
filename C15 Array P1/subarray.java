@@ -1,6 +1,4 @@
-
 import java.util.Scanner;
-
 class subarray {
     static void subarrays(int abc[]) {
         int ts=0,sum=0;
